@@ -7,9 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php
+        $text = 'Ciao, Sono Stefano e studio per diventare web developer. Ciao ciao';
+        
+        echo $text .'. Questa frase e\' lunga '. strlen($text). ' caratteri';
+        
+        $censura = $_GET['censura'];
+    ?>
+    <br>
+    <?php
+        $fraseCensurata = str_replace($censura , '***' , $text);
 
-
-
+        echo $fraseCensurata .' Questa frase e\' lunga '. strlen($fraseCensurata). ' caratteri'
+    ?>
 </body>
 </html>
